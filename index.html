@@ -28,34 +28,37 @@
     <main>
         <aside class="model" id="config-overlay">
             <h2>Choose your name</h2>
-            
+
             <form>
                 <div class="form-control">
                     <label for="playername">Player Name</label>
-                    <input type="text" name="playername" id="playername">
+                    <input type="text" name="playername" id="playername" required>
                 </div>
+                <p id="config-errors"></p>
                 <div>
-                    <button type="button" class="btn btn-alt">Cancel</button>
-                    <button type="button" class="btn">Confirm</button>
+                    <button type="button" id="cancel-config-btn" class="btn btn-alt">Cancel</button>
+                    <button type="submit" class="btn">Confirm</button>
                 </div>
             </form>
         </aside>
         <section id="game-configuration">
             <ol>
                 <li>
-                    <article>
+                    <article id="player-1-data">
                         <h2>Player 1</h2>
                         <h3>Player Name</h3>
                         <p class="player-symbol">X</p>
-                        <button class="btn btn-alt" id="edit-player-1-btn">Edit</button>
+                        <button class="btn btn-alt" id="edit-player-1-btn" data-playerid="1">
+                            Edit
+                        </button>
                     </article>
                 </li>
                 <li>
-                    <article>
+                    <article id="player-2-data">
                         <h2>Player 2</h2>
                         <h3>Player Name</h3>
                         <p class="player-symbol">O</p>
-                        <button class="btn btn-alt" id="edit-player-2-btn">Edit</button>
+                        <button class="btn btn-alt" id="edit-player-2-btn" data-playerid="2"   >Edit</button>
                     </article>
                 </li>
             </ol>
@@ -74,7 +77,7 @@
                 <li></li>
                 <li class="disabled">O</li>
 
-                <li ></li>
+                <li></li>
                 <li class="disabled">X</li>
                 <li></li>
 
