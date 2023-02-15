@@ -13,7 +13,7 @@ function closePlayerConfig() {
 }
 
 function savePlayerConfig(event) {
-    event.preventDefault();
+    event.preventDefault(); // 'submit' event의 기본 동작은 버튼을 클릭할 경우 브라우저가 HTTP 요청을 서버에게 보냄. -> 이 동작을 막음
     const formData = new FormData(event.target);
     const enteredPlayername = formData.get('playername').trim();
 
